@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Voorstel Fase 1 — Digitale Fundering & Continuïteit | DNSP</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue:#1E4786;
+    --oranje:#FF4F00;
+    --ink:#1C2B3A;
+    --cream:#F7F5F0;
+    --card:#FFFFFF;
+    --blue-tint:#EAF0FA;
+    --muted:#5A6675;
+    --line:#E5E2DA;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Lora',Georgia,serif;
+    line-height:1.65;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .page{
+    max-width:880px;
+    margin:0 auto;
+    padding:64px 56px 80px;
+  }
+  h1,h2,h3,.display{font-family:'Baloo 2',system-ui,sans-serif;color:var(--blue);line-height:1.12;}
+
+  /* ---------- HERO ---------- */
+  .hero{margin-bottom:14px;}
+  .eyebrow{
+    font-family:'Baloo 2',sans-serif;
+    font-weight:700;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    font-size:13px;
+    color:var(--oranje);
+    margin-bottom:18px;
+  }
+  .hero h1{
+    font-size:clamp(38px,6vw,58px);
+    font-weight:800;
+    letter-spacing:-.5px;
+  }
+  .hero h1 .accent{color:var(--oranje);}
+  .hero .lede{
+    font-size:19px;
+    color:var(--muted);
+    margin-top:18px;
+    max-width:620px;
+  }
+  .meta{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px 28px;
+    margin-top:28px;
+    padding-top:22px;
+    border-top:1px solid var(--line);
+    font-family:'Baloo 2',sans-serif;
+    font-weight:600;
+    font-size:13.5px;
+    letter-spacing:.04em;
+    color:var(--blue);
+  }
+  .meta span{display:inline-flex;align-items:center;gap:7px;}
+  .meta b{color:var(--muted);font-weight:500;}
+
+  /* ---------- SECTIONS ---------- */
+  section{margin-top:52px;}
+  .sec-title{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    margin-bottom:22px;
+  }
+  .sec-title .bar{
+    width:6px;
+    height:30px;
+    background:var(--oranje);
+    border-radius:3px;
+    flex:none;
+  }
+  .sec-title h2{font-size:27px;font-weight:700;}
+  p{margin-bottom:14px;}
+  p:last-child{margin-bottom:0;}
+  .lead{font-size:17.5px;color:var(--ink);}
+
+  /* ---------- "WAAROM NU" cards ---------- */
+  .why{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin-top:4px;
+  }
+  .why .item{
+    background:var(--blue-tint);
+    border-radius:16px;
+    padding:24px 22px;
+  }
+  .why .num{
+    font-family:'Baloo 2',sans-serif;
+    font-weight:800;
+    font-size:30px;
+    color:var(--oranje);
+    line-height:1;
+    margin-bottom:10px;
+  }
+  .why h3{font-size:18px;font-weight:700;margin-bottom:7px;}
+  .why p{font-size:14.5px;color:var(--muted);margin:0;line-height:1.55;}
+
+  /* ---------- SCOPE workstreams ---------- */
+  .stream{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:30px 32px;
+    margin-bottom:20px;
+    box-shadow:0 6px 22px rgba(28,43,58,.05);
+  }
+  .stream-head{
+    display:flex;
+    align-items:baseline;
+    gap:16px;
+    margin-bottom:16px;
+  }
+  .stream-tag{
+    font-family:'Baloo 2',sans-serif;
+    font-weight:800;
+    font-size:15px;
+    color:#fff;
+    background:var(--blue);
+    width:36px;height:36px;
+    border-radius:10px;
+    display:flex;align-items:center;justify-content:center;
+    flex:none;
+    align-self:flex-start;
+  }
+  .stream-head h3{font-size:21px;font-weight:700;}
+  .stream-head .sub{font-family:'Lora',serif;font-style:italic;color:var(--muted);font-size:15px;font-weight:400;display:block;margin-top:2px;}
+  .stream ul{list-style:none;margin:6px 0 0;}
+  .stream li{
+    position:relative;
+    padding-left:24px;
+    margin-bottom:9px;
+    font-size:15.5px;
+    color:var(--ink);
+  }
+  .stream li::before{
+    content:"";
+    position:absolute;
+    left:2px;top:9px;
+    width:8px;height:8px;
+    background:var(--oranje);
+    border-radius:50%;
+  }
+  .stream li:last-child{margin-bottom:0;}
+  .note-inline{
+    margin-top:16px;
+    padding:13px 16px;
+    background:var(--cream);
+    border-left:3px solid var(--oranje);
+    border-radius:0 10px 10px 0;
+    font-size:14px;
+    color:var(--muted);
+  }
+  .note-inline b{color:var(--blue);}
+
+  /* ---------- REEDS INBEGREPEN ---------- */
+  .included{
+    margin-top:8px;
+    background:var(--blue-tint);
+    border-radius:16px;
+    padding:22px 26px;
+    display:flex;gap:16px;align-items:flex-start;
+  }
+  .included .chk{font-family:'Baloo 2',sans-serif;font-weight:800;color:var(--oranje);font-size:24px;flex:none;line-height:1.1;}
+  .included h3{font-size:17px;font-weight:700;margin-bottom:5px;}
+  .included p{font-size:14.5px;color:var(--muted);margin:0;line-height:1.55;}
+  .included b{color:var(--blue);}
+
+  /* ---------- OUTCOMES ---------- */
+  .outcomes{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:14px 28px;
+    margin-top:4px;
+  }
+  .outcome{
+    display:flex;gap:13px;align-items:flex-start;
+  }
+  .outcome .dot{
+    font-family:'Baloo 2',sans-serif;font-weight:800;color:var(--oranje);
+    font-size:20px;line-height:1.2;flex:none;
+  }
+  .outcome p{margin:0;font-size:15px;}
+  .outcome b{color:var(--blue);font-family:'Baloo 2',sans-serif;font-weight:700;}
+
+  /* ---------- INVESTERING ---------- */
+  .invest-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+    margin-bottom:18px;
+  }
+  .invest-card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:26px 26px;
+  }
+  .invest-card .label{
+    font-family:'Baloo 2',sans-serif;font-weight:700;
+    color:var(--blue);font-size:16px;margin-bottom:6px;
+  }
+  .invest-card .amount{
+    font-family:'Baloo 2',sans-serif;font-weight:800;
+    color:var(--oranje);font-size:34px;line-height:1.1;
+  }
+  .invest-card .amount small{font-size:16px;color:var(--muted);font-weight:600;}
+  .invest-card p{font-size:14px;color:var(--muted);margin:8px 0 0;line-height:1.5;}
+  .pill{
+    display:inline-block;
+    background:var(--oranje);
+    color:#fff;
+    font-family:'Baloo 2',sans-serif;font-weight:700;
+    font-size:13px;
+    padding:5px 14px;border-radius:30px;
+    margin-bottom:10px;
+  }
+  .pill.blue{background:var(--blue);}
+
+  /* ---------- TIMELINE ---------- */
+  .timeline{margin-top:6px;border-left:2px solid var(--line);padding-left:26px;}
+  .tl-step{position:relative;padding-bottom:20px;}
+  .tl-step:last-child{padding-bottom:0;}
+  .tl-step::before{
+    content:"";position:absolute;left:-33px;top:3px;
+    width:13px;height:13px;border-radius:50%;
+    background:var(--oranje);border:3px solid var(--cream);
+  }
+  .tl-step .when{
+    font-family:'Baloo 2',sans-serif;font-weight:700;color:var(--blue);font-size:14px;
+    letter-spacing:.03em;
+  }
+  .tl-step p{margin:2px 0 0;font-size:15px;}
+
+  /* ---------- CTA / FOOTER ---------- */
+  .cta{
+    margin-top:56px;
+    background:var(--blue);
+    border-radius:22px;
+    padding:42px 44px;
+    color:#fff;
+    position:relative;
+    overflow:hidden;
+  }
+  .cta::after{
+    content:"\201D";
+    position:absolute;right:30px;bottom:-30px;
+    font-family:'Baloo 2',sans-serif;font-weight:800;
+    font-size:180px;color:rgba(255,79,0,.16);line-height:1;
+  }
+  .cta h2{color:#fff;font-size:26px;font-weight:700;margin-bottom:10px;}
+  .cta h2 .accent{color:var(--oranje);}
+  .cta p{color:rgba(255,255,255,.85);font-size:16px;max-width:560px;margin-bottom:22px;}
+  .cta .contact{
+    font-family:'Baloo 2',sans-serif;font-weight:600;
+    letter-spacing:.05em;font-size:14px;color:#fff;
+  }
+  .cta .contact a{color:var(--oranje);text-decoration:none;}
+
+  .next-teaser{
+    margin-top:34px;padding-top:22px;border-top:1px solid var(--line);
+    font-size:14.5px;color:var(--muted);
+  }
+  .next-teaser b{color:var(--blue);font-family:'Baloo 2',sans-serif;font-weight:700;}
+
+  .ph{
+    background:rgba(255,79,0,.12);
+    border-bottom:1px dashed var(--oranje);
+    padding:0 3px;border-radius:3px;
+    font-family:'Baloo 2',sans-serif;font-weight:600;color:var(--blue);
+  }
+
+  /* ---------- PRINT BUTTON ---------- */
+  .print-btn{
+    position:fixed;top:20px;right:20px;z-index:50;
+    background:var(--oranje);color:#fff;border:none;cursor:pointer;
+    font-family:'Baloo 2',sans-serif;font-weight:700;font-size:14px;
+    padding:11px 18px;border-radius:30px;
+    box-shadow:0 6px 18px rgba(255,79,0,.35);
+    transition:transform .15s ease;
+  }
+  .print-btn:hover{transform:translateY(-2px);}
+
+  @media (max-width:720px){
+    .page{padding:40px 22px 60px;}
+    .why,.invest-grid,.outcomes{grid-template-columns:1fr;}
+  }
+  @media print{
+    .print-btn{display:none;}
+    body{background:#fff;}
+    .page{padding:0;max-width:100%;}
+    .stream,.invest-card,.cta,.why .item,.included{box-shadow:none;}
+    section,.stream,.cta{page-break-inside:avoid;}
+    .cta{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  }
+</style>
+</head>
+<body>
+
+<button class="print-btn" onclick="window.print()">Opslaan als PDF ↓</button>
+
+<div class="page">
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="eyebrow">Voorstel · Fase 1 van de groei-roadmap</div>
+    <h1>Digitale Fundering<br>&amp; <span class="accent">Continuïteit</span></h1>
+    <p class="lede">Een veilige, professionele digitale thuisbasis voor het schoolteam — eigendom van de organisatie en bestand tegen elke bestuurswisseling.</p>
+    <div class="meta">
+      <span><b>Voor</b> Bestuur De Nederlandse School Parijs</span>
+      <span><b>Door</b> Gustavo Camacho · DWB / Design With Brains</span>
+      <span><b>Datum</b> 5 juni 2026</span>
+    </div>
+  </header>
+
+  <!-- CONTEXT -->
+  <section>
+    <div class="sec-title"><span class="bar"></span><h2>Waar we staan</h2></div>
+    <p class="lead">De nieuwe website staat live en is opgeleverd conform de WCAG 2.2 AA-normen. Tijdens de overdracht kwam de logische vervolgvraag: hoe bouwen we hierop verder?</p>
+    <p>Dit voorstel beschrijft <strong>Fase 1</strong>: het op orde brengen van de digitale fundering — een professionele e-mail en werkomgeving die de organisatie zelf in eigendom heeft. Het is bewust de eerste fase, omdat alles wat volgt hier veiliger en effectiever op kan worden gebouwd. De kosten voor de software zelf blijven hierbij nagenoeg nihil.</p>
+  </section>
+
+  <!-- WAAROM NU -->
+  <section>
+    <div class="sec-title"><span class="bar"></span><h2>Waarom nu</h2></div>
+    <div class="why">
+      <div class="item">
+        <div class="num">01</div>
+        <h3>Persoonlijke Gmail als gezicht</h3>
+        <p>De school communiceert nu via een persoonlijk Gmail-adres. Dat is gekoppeld aan een persoon, niet aan de organisatie — een risico bij bestuurswisselingen.</p>
+      </div>
+      <div class="item">
+        <div class="num">02</div>
+        <h3>Kennis verdwijnt bij vertrek</h3>
+        <p>Als een bestuurslid vertrekt, kunnen toegang en geschiedenis meeverdwijnen. Er is geen centrale, door de organisatie beheerde plek voor de e-mail en documenten.</p>
+      </div>
+      <div class="item">
+        <div class="num">03</div>
+        <h3>Documenten verspreid</h3>
+        <p>Roosters, documenten en e-mails staan op verschillende plekken. Eén centrale, veilige werkplek scheelt het team veel tijd.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCOPE -->
+  <section>
+    <div class="sec-title"><span class="bar"></span><h2>Wat we opzetten</h2></div>
+
+    <div class="stream">
+      <div class="stream-head">
+        <div class="stream-tag">A</div>
+        <div>
+          <h3>Veilige Digitale Thuisbasis<span class="sub">Google Workspace voor het hele schoolteam</span></h3>
+        </div>
+      </div>
+      <ul>
+        <li>Eén centrale, beveiligde werkomgeving met beheer via de admin-console</li>
+        <li>Gedeelde Drive met een logische, overzichtelijke mappenstructuur</li>
+        <li>Gedeelde agenda voor vakanties, evenementen en lesroosters — koppelbaar aan de dynamische agenda op de website</li>
+        <li>Google Formulieren voor inschrijvingen en aanvragen</li>
+        <li>Korte overdracht &amp; instructie voor het team</li>
+      </ul>
+      <div class="note-inline">
+        <b>Software vrijwel kosteloos.</b> Als geregistreerde vereniging (association loi 1901) komt DNSP zeer waarschijnlijk in aanmerking voor <b>Google Workspace for Nonprofits</b> — gratis, met o.a. 100 TB gedeelde opslag. Mocht dit niet lukken, dan blijft er een gereduceerd tarief van enkele euro&rsquo;s per gebruiker per maand beschikbaar.
+      </div>
+    </div>
+
+    <div class="stream">
+      <div class="stream-head">
+        <div class="stream-tag">B</div>
+        <div>
+          <h3>Professionele E-mail op eigen domein<span class="sub">van persoonlijke Gmail naar directie@denederlandseschoolparijs.fr</span></h3>
+        </div>
+      </div>
+      <ul>
+        <li>E-mailadressen op het eigen domein van de school voor bestuur en docenten</li>
+        <li>Eigendom bij de organisatie, niet bij een persoon — bestendig tegen bestuurswisselingen</li>
+        <li>Correcte DNS/MX-configuratie en veilige overgang zonder verlies van berichten</li>
+        <li>Versterkt de AVG/GDPR-positie die in de website-fase al is opgebouwd</li>
+      </ul>
+    </div>
+
+    <div class="included">
+      <div class="chk">&#10003;</div>
+      <div>
+        <h3>Reeds inbegrepen — zonder meerkosten</h3>
+        <p>De <b>Meta Pixel &amp; conversie-tracking</b> en de <b>Franstalige lokalisatie (/fr/)</b> vallen al binnen het websiteproject. Die zijn in beheer — Fase 1 richt zich puur op de werkomgeving en e-mail eromheen.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUTCOMES -->
+  <section>
+    <div class="sec-title"><span class="bar"></span><h2>Wat dit oplevert</h2></div>
+    <div class="outcomes">
+      <div class="outcome"><span class="dot">→</span><p><b>Professionele uitstraling</b> naar ouders, partners en de Onderwijsinspectie.</p></div>
+      <div class="outcome"><span class="dot">→</span><p><b>Continuïteit</b> — kennis en toegang blijven bij de school, ook bij bestuurswisselingen.</p></div>
+      <div class="outcome"><span class="dot">→</span><p><b>Veiligheid &amp; AVG</b> — een beheerde, beveiligde omgeving in plaats van losse accounts.</p></div>
+      <div class="outcome"><span class="dot">→</span><p><b>Eén plek voor alles</b> — e-mail, documenten en agenda op één centrale plaats.</p></div>
+      <div class="outcome"><span class="dot">→</span><p><b>Tijdwinst</b> voor het bestuur — minder zoeken, meer overzicht.</p></div>
+      <div class="outcome"><span class="dot">→</span><p><b>Een stevig fundament</b> voor de volgende fases.</p></div>
+    </div>
+  </section>
+
+  <!-- INVESTERING -->
+  <section>
+    <div class="sec-title"><span class="bar"></span><h2>Investering</h2></div>
+    <div class="invest-grid">
+      <div class="invest-card">
+        <span class="pill">Eenmalig</span>
+        <div class="label">Opzet &amp; migratie Fase 1</div>
+        <div class="amount">&euro;950</div>
+        <p>Inrichting Google Workspace, aanvraag non-profitprogramma, e-mailmigratie, mappenstructuur, formulieren en overdracht aan het team.</p>
+      </div>
+      <div class="invest-card">
+        <span class="pill blue">Doorlopend (optioneel)</span>
+        <div class="label">Core Digital Care</div>
+        <div class="amount">&euro;250 <small>/ maand</small></div>
+        <p>Technisch beheer, monitoring, back-ups en Finsweet-kwaliteitsborging — nu uitgebreid met beheer van de digitale werkplek. Conform het reeds gepresenteerde supportplan.</p>
+      </div>
+    </div>
+    <div class="note-inline">
+      <b>Softwarekosten:</b> &euro;0 bij toekenning van het non-profitprogramma. Het genoemde eenmalige bedrag betreft uitsluitend het werk van DWB en is een richtbedrag dat in onderling overleg wordt vastgesteld.
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section>
+    <div class="sec-title"><span class="bar"></span><h2>Planning</h2></div>
+    <div class="timeline">
+      <div class="tl-step">
+        <div class="when">Week 1</div>
+        <p>Aanvraag Google for Nonprofits &amp; domeinverificatie. De validatie verloopt via Google&rsquo;s partner en duurt doorgaans enkele werkdagen.</p>
+      </div>
+      <div class="tl-step">
+        <div class="when">Week 1–2</div>
+        <p>Inrichting Workspace, e-mailaccounts, gedeelde Drive en formulieren. Veilige migratie van de huidige e-mail.</p>
+      </div>
+      <div class="tl-step">
+        <div class="when">Week 2</div>
+        <p>Korte overdracht en instructie voor het schoolteam. Fase 1 afgerond en live.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta">
+    <h2>Klaar voor de <span class="accent">volgende stap</span>?</h2>
+    <p>Ik bespreek dit voorstel graag met het bestuur en kan na akkoord direct van start. Eén korte bevestiging is genoeg om de aanvraag in gang te zetten.</p>
+    <div class="contact">tavo@designwithbrains.com</div>
+  </div>
+
+  <!-- TEASER -->
+  <div class="next-teaser">
+    <b>Hierna — Fase 2:</b> merkidentiteit &amp; herbruikbare Canva-sjablonen, en een eenvoudig, onderhoudbaar systeem voor sociale media. We bouwen stap voor stap, zonder het team te overvragen.
+  </div>
+
+</div>
+</body>
+</html>
