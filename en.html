@@ -308,12 +308,12 @@
     .why,.invest-grid,.outcomes{grid-template-columns:1fr;}
   }
   @media print{
+    *{-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important;}
     .print-btn{display:none;}
     body{background:#fff;}
-    .page{padding:0;max-width:100%;}
+    .page{padding:24px 32px;max-width:100%;}
     .stream,.invest-card,.cta,.why .item,.included{box-shadow:none;}
-    section,.stream,.cta{page-break-inside:avoid;}
-    .cta{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    section,.stream,.cta,.included,.invest-card,.why .item{page-break-inside:avoid;}
   }
 </style>
 </head>
