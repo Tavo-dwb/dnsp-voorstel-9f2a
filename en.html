@@ -307,11 +307,12 @@
     .page{padding:40px 22px 60px;}
     .why,.invest-grid,.outcomes{grid-template-columns:1fr;}
   }
+  @page{margin:16mm 15mm;}
   @media print{
     *{-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important;}
     .print-btn{display:none;}
     body{background:#fff;}
-    .page{padding:24px 32px;max-width:100%;}
+    .page{padding:0;max-width:100%;}
     .stream,.invest-card,.cta,.why .item,.included{box-shadow:none;}
     section,.stream,.cta,.included,.invest-card,.why .item{page-break-inside:avoid;}
   }
