@@ -239,6 +239,26 @@
   }
   .pill.blue{background:var(--blue);}
 
+  /* ---------- SUPPORT OPTIONS ---------- */
+  .support-title{font-family:'Baloo 2',sans-serif;font-weight:700;color:var(--blue);font-size:18px;margin:28px 0 14px;}
+  .support-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+  .opt{
+    background:var(--card);border:1px solid var(--line);border-radius:16px;
+    padding:24px 22px 22px;position:relative;display:flex;flex-direction:column;
+  }
+  .opt.rec{border-color:var(--oranje);box-shadow:0 8px 24px rgba(255,79,0,.12);}
+  .opt .badge{
+    position:absolute;top:-11px;left:22px;
+    background:var(--oranje);color:#fff;
+    font-family:'Baloo 2',sans-serif;font-weight:700;font-size:11px;
+    letter-spacing:.07em;text-transform:uppercase;
+    padding:4px 12px;border-radius:30px;
+  }
+  .opt .oname{font-family:'Baloo 2',sans-serif;font-weight:700;color:var(--blue);font-size:16px;margin-bottom:4px;}
+  .opt .oprice{font-family:'Baloo 2',sans-serif;font-weight:800;color:var(--oranje);font-size:25px;line-height:1.1;margin-bottom:10px;}
+  .opt .oprice small{font-size:13px;color:var(--muted);font-weight:600;}
+  .opt p{font-size:13.5px;color:var(--muted);margin:0;line-height:1.5;}
+
   /* ---------- TIMELINE ---------- */
   .timeline{margin-top:6px;border-left:2px solid var(--line);padding-left:26px;}
   .tl-step{position:relative;padding-bottom:20px;}
@@ -305,7 +325,7 @@
 
   @media (max-width:720px){
     .page{padding:40px 22px 60px;}
-    .why,.invest-grid,.outcomes{grid-template-columns:1fr;}
+    .why,.invest-grid,.outcomes,.support-grid{grid-template-columns:1fr;}
   }
   @page{margin:16mm 15mm;}
   @media print{
@@ -313,8 +333,8 @@
     .print-btn{display:none;}
     body{background:#fff;}
     .page{padding:0;max-width:100%;}
-    .stream,.invest-card,.cta,.why .item,.included{box-shadow:none;}
-    section,.stream,.cta,.included,.invest-card,.why .item{page-break-inside:avoid;}
+    .stream,.invest-card,.cta,.why .item,.included,.opt{box-shadow:none;}
+    section,.stream,.cta,.included,.invest-card,.why .item,.opt{page-break-inside:avoid;}
   }
 </style>
 </head>
@@ -428,22 +448,36 @@
   <!-- INVESTMENT -->
   <section>
     <div class="sec-title"><span class="bar"></span><h2>Investment</h2></div>
-    <div class="invest-grid">
-      <div class="invest-card">
-        <span class="pill">One-time</span>
-        <div class="label">Phase 1 setup &amp; migration</div>
-        <div class="amount">&euro;950</div>
-        <p>Google Workspace setup, the nonprofit application, email migration, folder structure, forms, and handover to the team.</p>
+
+    <div class="invest-card">
+      <span class="pill">One-time</span>
+      <div class="label">Phase 1 setup &amp; migration</div>
+      <div class="amount">&euro;950</div>
+      <p>Google Workspace setup, the nonprofit application, email migration, folder structure, forms, and handover to the team.</p>
+    </div>
+
+    <div class="support-title">Ongoing support — choose what fits</div>
+    <div class="support-grid">
+      <div class="opt rec">
+        <span class="badge">Recommended</span>
+        <div class="oname">Essentials Care</div>
+        <div class="oprice">&euro;90 <small>/ month</small></div>
+        <p>Up to ~1 hour of edits and support a month, light monitoring, small Workspace admin, and priority response.</p>
       </div>
-      <div class="invest-card">
-        <span class="pill blue">Ongoing (optional)</span>
-        <div class="label">Core Digital Care</div>
-        <div class="amount">&euro;250 <small>/ month</small></div>
-        <p>Technical management, monitoring, backups and Finsweet quality assurance — now extended to cover the digital workspace. In line with the support plan already presented.</p>
+      <div class="opt">
+        <div class="oname">Quarterly Check-up</div>
+        <div class="oprice">&euro;190 <small>/ quarter</small></div>
+        <p>Four scheduled health-checks a year: updates, security, link and form checks, a content review and a short report.</p>
+      </div>
+      <div class="opt">
+        <div class="oname">Prepaid Hour Bank</div>
+        <div class="oprice">&euro;850 <small>/ 10 hrs</small></div>
+        <p>Ten hours upfront, valid 12 months. Used whenever you need them, with priority. Top up anytime.</p>
       </div>
     </div>
+
     <div class="note-inline">
-      <b>Software costs:</b> &euro;0 once the nonprofit program is approved. The one-time amount shown covers DWB's work only and is an indicative figure, to be confirmed together.
+      <b>Also available:</b> On-Demand support at &euro;95/hour, no commitment. Software costs remain &euro;0 once the nonprofit program is approved. Amounts shown cover DWB's work.
     </div>
   </section>
 
